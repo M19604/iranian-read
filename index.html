@@ -6,7 +6,10 @@
 </style>
 <script>
   window.onload = function() {
-    var d = new Date();
-    location.href = `https://m19604.github.io/iranian-read/${d.getMonth()+1}/${d.getDate()}.html`;
+    fetch("https://api.github.com/repos/M19604/iranian-read").then(f=>{
+        return f.json();
+    }).then(g=>{
+        location.href = `https://m19604.github.io/iranian-read/${new Date(g["pushed_at"]).getMonth()+1}/${new Date(g["pushed_at"]).getDate()}`;
+    })
   }
 </script>
