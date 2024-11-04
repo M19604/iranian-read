@@ -1,0 +1,130 @@
+<!--** WRITTEN BY LUKE SKUTT **-->
+<title>Iranian Read</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News Cycle">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Newsreader">
+<style>
+    body {
+        margin: 0;
+        background-color: #1a1a1a;
+        user-select: none;
+    }
+
+    .page {
+        height: 95%;
+        width: 38%;
+        background-color: #f1f1f1;
+        position: relative;
+        margin-top: 2.5vh;
+        left: 31%;
+    }
+
+    .cover {
+        background-color: #31c459;
+    }
+
+    .cover #date {
+        height: 10%;
+        width: 80%;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        display: flex;
+        align-items: center;
+        font-family: "News Cycle";
+        color: #1a1a1a;
+    }
+
+    .cover .title {
+        height: 40%;
+        width: 80%;
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        font-family: sans-serif;
+        color: #fff;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+    .cover .footer {
+        height: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #e43434;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "News Cycle";
+        color: #1a1a1a;
+    }
+
+    .page .header {
+        height: 10%;
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "News Cycle";
+        color: #e43434;
+        font-size: 4vw;
+    }
+
+    .div {
+    counter-reset: page 0;
+    }
+
+    .page:not(.cover) {
+        counter-increment: page 1;
+    }
+
+    .page:not(.cover):after {
+        content: counter(page);
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        color: #1a1a1a;
+        font-family: "Newsreader";
+    }
+
+    .page .content {
+        color: #1a1a1a;
+        font-family: "Newsreader";
+        width: 80%;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        font-size: 1.5vw;
+    }
+
+    .page .content .first {
+        font-size: 2vw;
+    }
+</style>
+<div class="page cover">
+    <div id="date"></div>
+    <div class="title">IRANIAN<br>READ</div>
+    <div class="footer">OFFICIAL DOCUMENT OF IRAN</div>
+</div>
+<div class="page">
+    <div class="header">POLAND NEEDS YOU!</div>
+    <div class="content"><span class="first">A</span>ttention nations of the world!<br>The Republic of Poland needs your help!<br>Donate your spare prisoners to Poland to help them build the future!<br><br><i>This ad was paid for Republic of Poland.</i></div>
+</div>
+<div class="page">
+    <div class="header">PEACE COUNCIL</div>
+    <div class="content"><span class="first">T</span>oday, November 4th, Iran is officially a member of the Peace Council.</div>
+</div>
+<div class="page">
+    <div class="header">MODERATION TEAM</div>
+    <div class="content"><span class="first">I</span>ran's leader is now officially a temp moderator in the administration team.</div>
+</div>
+<script>
+    window.onload = function() {
+        document.getElementById("date").textContent = `${location.pathname.split("/")[2]}/${location.pathname.split("/")[3]}/2024`;
+    }
+</script>
+<!--** WRITTEN BY LUKE SKUTT **-->
